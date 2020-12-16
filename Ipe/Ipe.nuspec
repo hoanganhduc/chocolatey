@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>Ipe</id>
+    <title>Ipe extensible drawing editor</title>
+    <version>7.2.21</version>
+    <authors>Otfried Cheong</authors>
+    <owners>Otfried Cheong</owners>
+    <summary>The Ipe extensible drawing editor for Windows</summary>
+    <description>Ipe is a drawing editor for creating figures in PDF format. It supports making small figures for inclusion into LaTeX-documents as well as making multi-page PDF presentations.</description>
+    <projectUrl>http://ipe.otfried.org/</projectUrl>
+    <tags>ipe drawing figure pdf svg eps png</tags>
+	<licenseUrl>http://www.gnu.org/copyleft/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance> <!-- or true if you require the user to accept the License before installing -->
+    <iconUrl>https://a.fsdn.com/allura/p/ipe7/icon?1436280589</iconUrl>
+  </metadata>
+</package>
