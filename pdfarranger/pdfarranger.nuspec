@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>pdfarranger</id>
+    <title>pdfarranger</title>
+    <version>1.6.2</version>
+    <authors>pdfarranger</authors>
+    <summary>pdfarranger for Windows</summary>
+    <description>Small python-gtk application, which helps the user to merge or split pdf documents and rotate, crop and rearrange their pages using an interactive and intuitive graphical interface</description>
+    <projectUrl>https://github.com/pdfarranger/pdfarranger</projectUrl>
+    <tags>pdfarranger pdf merge split rotate crop rearrange gui</tags>
+	<licenseUrl>https://github.com/pdfarranger/pdfarranger/blob/master/COPYING</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance> <!-- or true if you require the user to accept the License before installing -->
+    <iconUrl>https://github.com/pdfarranger/pdfarranger/raw/master/data/icons/hicolor/48x48/apps/com.github.jeromerobert.pdfarranger.png</iconUrl>
+  </metadata>
+</package>
