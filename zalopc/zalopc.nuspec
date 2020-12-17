@@ -9,6 +9,7 @@
     <summary>Zalo PC for Windows</summary>
     <description>Zalo PC for Windows - A Vietnamese messaging app</description>
     <projectUrl>https://zalo.me/pc</projectUrl>
+    <licenseUrl>https://zalo.me/zalo/dieukhoan/</licenseUrl>
     <tags>Vietnamese messaging zalo video chat</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance> <!-- or true if you require the user to accept the License before installing -->
     <iconUrl>https://stc-zaloprofile.zdn.vn/pc/v1/images/zalo_sharelogo.png</iconUrl>
