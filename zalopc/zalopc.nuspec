@@ -7,7 +7,17 @@
     <authors>VNG Corporation</authors>
     <owners>VNG Corporation</owners>
     <summary>Zalo PC for Windows</summary>
-    <description>Zalo PC for Windows - A Vietnamese messaging app</description>
+    <description>Zalo PC for Windows - A Vietnamese messaging app
+### Features
+
+* Message your friend in a snap. Receive notifications the moment they reply back.
+* Express your emotion with fun and cheerful emoticons and stickers.
+* Free voice call and video call.
+* Send group messages easily with no effort
+* Fast file transferring. Easy file management.
+* Screen snipping and annotating
+* High level of privacy
+	</description>
     <projectUrl>https://zalo.me/pc</projectUrl>
     <licenseUrl>https://zalo.me/zalo/dieukhoan/</licenseUrl>
     <tags>Vietnamese messaging zalo video chat</tags>
