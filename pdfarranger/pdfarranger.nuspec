@@ -12,5 +12,8 @@
 	<licenseUrl>https://github.com/pdfarranger/pdfarranger/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance> <!-- or true if you require the user to accept the License before installing -->
     <iconUrl>https://github.com/pdfarranger/pdfarranger/raw/master/data/icons/hicolor/48x48/apps/com.github.jeromerobert.pdfarranger.png</iconUrl>
+	<dependencies>
+      <dependency id="autohotkey.portable" />
+    </dependencies>
   </metadata>
 </package>
