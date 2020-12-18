@@ -8,7 +8,7 @@
     <owners>Nguyen Huu Dien</owners>
     <summary>VieTeX for Windows</summary>
     <description>A TeX Editor for Vietnamese (Chương trình soạn thảo TeX)
-### Feattures
+### Features
 
 * VieTeX Editor was based on Scintilla edit control (v2.1). 
 * Allows syntax highlighting for TeX.
