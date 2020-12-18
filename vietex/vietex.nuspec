@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>vietex</id>
+    <title>VieTeX</title>
+	<version>4.0</version>
+    <authors>Nguyen Huu Dien</authors>
+    <owners>Nguyen Huu Dien</owners>
+    <summary>VieTeX for Windows</summary>
+    <description>A Vietnamese TeX Editor (Chương trình soạn thảo TeX)</description>
+    <projectUrl>https://nhdien.wordpress.com</projectUrl>
+    <tags>vietex tex editor Vietnamese</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance> <!-- or true if you require the user to accept the License before installing -->
+	<dependencies>
+      <dependency id="mediafire-dl" version="2020.11.24" />
+      <dependency id="7zip" version="19.0" />
+    </dependencies>
+	<iconUrl>https://nhdien.files.wordpress.com/2012/06/vietex1.jpg</iconUrl>
+  </metadata>
+</package>

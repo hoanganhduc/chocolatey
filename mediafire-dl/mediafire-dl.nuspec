@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>mediafire-dl</id>
+    <title>mediafire-dl</title>
+	<version>2020.11.24</version>
+    <authors>Juvenal Yescas</authors>
+    <owners>Juvenal Yescas</owners>
+    <summary>mediafire-dl for Windows</summary>
+    <description>Simple command-line script to download files from mediafire based on [gdown](https://github.com/wkentaro/gdown)</description>
+    <projectUrl>https://github.com/Juvenal-Yescas/mediafire-dl</projectUrl>
+    <tags>mediafire download python</tags>
+	<licenseUrl>https://github.com/Juvenal-Yescas/mediafire-dl/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance> <!-- or true if you require the user to accept the License before installing -->
+	<dependencies>
+      <dependency id="python3" version="3.8.6" />
+    </dependencies>
+  </metadata>
+</package>

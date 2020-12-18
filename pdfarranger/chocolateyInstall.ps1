@@ -15,6 +15,7 @@ $packageArgs = @{
   checksumType  = 'sha256'
 }
 
+Stop-Process -ProcessName "AutoHotkey*" -Force
 $ahkExe = 'AutoHotKey'
 $ahkFile = Join-Path $toolsDir "pdfarrangerInstall.ahk"
 $ahkProc = Start-Process -FilePath $ahkExe `
