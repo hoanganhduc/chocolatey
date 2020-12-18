@@ -13,7 +13,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance> <!-- or true if you require the user to accept the License before installing -->
 	<dependencies>
       <dependency id="mediafire-dl" version="2020.11.24" />
-      <dependency id="7zip" version="19.0" />
+      <dependency id="7zip.portable" version="19.0" />
     </dependencies>
 	<iconUrl>https://nhdien.files.wordpress.com/2012/06/vietex1.jpg</iconUrl>
   </metadata>
