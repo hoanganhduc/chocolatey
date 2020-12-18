@@ -3,7 +3,6 @@ $ErrorActionPreference = 'Stop'
 $toolsDir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 $fileLocation = Join-Path $toolsDir "vietex41.zip"
 $exefileLocation = Join-Path $toolsDir "vietex40.exe"
-$mediafiredlFile = Join-Path $(Split-Path -parent $toolsDir) "mediafire-dl" | Join-Path -Child "mediafire-dl-master" | Join-Path -Child "mediafire-dl.py"
 
 $packageArgs = @{
   packageName    = 'vietex'
@@ -22,7 +21,7 @@ $packageArgs = @{
 if(!(Test-Path $fileLocation -PathType leaf))
 {
 	cd $toolsDir
-	Start-Process python -ArgumentList "$mediafiredlFile http://www.mediafire.com/download/u2z7mxhxfh1f4yg/vietex41.zip" -NoNewWindow -PassThru -Wait
+	Start-Process mediafire-dl -ArgumentList "http://www.mediafire.com/download/u2z7mxhxfh1f4yg/vietex41.zip" -NoNewWindow -PassThru -Wait
 }
 
 Start-Process 7z -ArgumentList "x $fileLocation -y -o$toolsDir" -NoNewWindow -PassThru -Wait

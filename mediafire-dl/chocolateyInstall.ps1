@@ -15,6 +15,11 @@ $packageArgs = @{
   checksumType   = 'sha256'
 }
 
-pip install --disable-pip-version-check requests tqdm six
+pip install --disable-pip-version-check requests tqdm six pyinstaller
 
 Install-ChocolateyZipPackage @packageArgs
+
+$mediafiredlFile = Join-Path $toolsDir "mediafire-dl-master" | Join-Path -Child "mediafire-dl.py"
+$pyinstBuidDir = Join-Path $toolsDir "mediafire-dl-master" | Join-Path -Child "build"
+
+Start-Process pyinstaller -ArgumentList "--clean --onefile $mediafiredlFile --workpath $pyinstBuidDir --distpath $toolsDir" -NoNewWindow -PassThru -Wait
