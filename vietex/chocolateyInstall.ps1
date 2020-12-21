@@ -25,9 +25,11 @@ if(!(Test-Path $fileLocation -PathType leaf))
 	$download_page = Invoke-WebRequest -UseBasicParsing -Uri https://www.mediafire.com/download/u2z7mxhxfh1f4yg/vietex41.zip
 	$regex = "vietex41.zip$" 
 	$zipFileUrl  = $download_page.links | ? href -match $regex | select -First 1 -expand href 
-	Get-ChocolateyWebFile -packageName $packageName -FileFullPath "$fileLocation" -Url "$zipFileUrl"
+	Invoke-WebRequest -Uri "$zipFileUrl" -OutFile "$fileLocation"
 }
 
 Get-ChocolateyUnzip -FileFullPath "$fileLocation" -Destination "$toolsDir"
+# 7z x $fileLocation -o$toolsDir
 Install-ChocolateyZipPackage @packageArgs
+Remove-Item $exefileLocation -Force -Confirm:$false
 Install-ChocolateyShortcut -ShortcutFilePath "${env:UserProfile}\Desktop\VieTeX.lnk" -TargetPath "$installDir\vietex.exe"
