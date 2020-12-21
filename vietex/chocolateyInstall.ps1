@@ -1,6 +1,7 @@
 $ErrorActionPreference = 'Stop'
 
 $toolsDir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
+$installDir = "${env:SystemDrive}\vietex"
 $fileLocation = Join-Path $toolsDir "vietex41.zip"
 $exefileLocation = Join-Path $toolsDir "vietex40.exe"
 
@@ -8,7 +9,7 @@ $packageArgs = @{
   packageName    = 'vietex'
   softwareName   = 'VieTeX'
   fileType       = 'exe'
-  unziplocation  = "$toolsDir"
+  unziplocation  = "$installDir"
   file           = $exefileLocation
   file64         = $exefileLocation
   validExitCodes = @(0, 3010, 1641)
@@ -21,14 +22,12 @@ $packageArgs = @{
 if(!(Test-Path $fileLocation -PathType leaf))
 {
 	cd $toolsDir
-	$download_page = Invoke-WebRequest -Uri https://www.mediafire.com/download/u2z7mxhxfh1f4yg/vietex41.zip
+	$download_page = Invoke-WebRequest -UseBasicParsing -Uri https://www.mediafire.com/download/u2z7mxhxfh1f4yg/vietex41.zip
 	$regex = "vietex41.zip$" 
 	$zipFileUrl  = $download_page.links | ? href -match $regex | select -First 1 -expand href 
 	Get-ChocolateyWebFile -packageName $packageName -FileFullPath "$fileLocation" -Url "$zipFileUrl"
 }
 
 Get-ChocolateyUnzip -FileFullPath "$fileLocation" -Destination "$toolsDir"
-Remove-Item $fileLocation -Force -Confirm:$false
 Install-ChocolateyZipPackage @packageArgs
-Remove-Item $exefileLocation -Force -Confirm:$false
-Install-ChocolateyShortcut -ShortcutFilePath "${env:UserProfile}\Desktop\VieTeX.lnk" -TargetPath "$toolsDir\\vietex.exe"
+Install-ChocolateyShortcut -ShortcutFilePath "${env:UserProfile}\Desktop\VieTeX.lnk" -TargetPath "$installDir\vietex.exe"
