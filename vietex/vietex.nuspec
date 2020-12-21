@@ -24,10 +24,6 @@ The default settings in VieTeX work best with [MikTeX](https://miktex.org/).
     <projectUrl>https://nhdien.wordpress.com</projectUrl>
     <tags>vietex tex editor Vietnamese</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance> <!-- or true if you require the user to accept the License before installing -->
-	<dependencies>
-      <dependency id="mediafire-dl" version="2020.11.24" />
-      <dependency id="7zip.portable" version="19.0" />
-    </dependencies>
 	<iconUrl>https://nhdien.files.wordpress.com/2012/06/vietex1.jpg</iconUrl>
   </metadata>
 </package>

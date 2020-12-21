@@ -21,10 +21,13 @@ $packageArgs = @{
 if(!(Test-Path $fileLocation -PathType leaf))
 {
 	cd $toolsDir
-	Start-Process mediafire-dl -ArgumentList "http://www.mediafire.com/download/u2z7mxhxfh1f4yg/vietex41.zip" -NoNewWindow -PassThru -Wait
+	$download_page = Invoke-WebRequest -Uri https://www.mediafire.com/download/u2z7mxhxfh1f4yg/vietex41.zip
+	$regex = "vietex41.zip$" 
+	$zipFileUrl  = $download_page.links | ? href -match $regex | select -First 1 -expand href 
+	Get-ChocolateyWebFile -packageName $packageName -FileFullPath "$fileLocation" -Url "$zipFileUrl"
 }
 
-Start-Process 7z -ArgumentList "x $fileLocation -y -o$toolsDir" -NoNewWindow -PassThru -Wait
+Get-ChocolateyUnzip -FileFullPath "$fileLocation" -Destination "$toolsDir"
 Remove-Item $fileLocation -Force -Confirm:$false
 Install-ChocolateyZipPackage @packageArgs
 Remove-Item $exefileLocation -Force -Confirm:$false
