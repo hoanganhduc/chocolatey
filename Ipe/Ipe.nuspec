@@ -19,6 +19,10 @@
 * Ipe is written in standard C++ and Lua 5.3..
 
 You can find more information about Ipe features in the [manual](http://ipe.otfried.org/manual/manual.html).
+
+### Parameters
+
+* `/InstallDir:(path)` - Set custom path for the installation directory. The default setting is `C:\`.
 	</description>
     <projectUrl>http://ipe.otfried.org/</projectUrl>
     <tags>ipe drawing figure pdf svg eps png</tags>

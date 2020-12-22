@@ -1,10 +1,18 @@
 $ErrorActionPreference = 'Stop';
 
+$pp = Get-PackageParameters
+
+if ($pp['InstallDir']) {
+	$installDir = $pp['InstallDir']
+} else {
+	$installDir = "${env:SystemDrive}"
+}
+
 $packageArgs = @{
   packageName    = 'Ipe'
   softwareName   = 'Ipe extensible drawing editor'
   fileType       = 'zip'
-  unziplocation  = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
+  unziplocation  = "$installDir"
   url            = 'https://dl.bintray.com/otfried/generic/ipe/7.2/ipe-7.2.21-win32.zip'
   url64bit       = 'https://dl.bintray.com/otfried/generic/ipe/7.2/ipe-7.2.21-win64.zip'
   validExitCodes = @(0)
@@ -14,4 +22,5 @@ $packageArgs = @{
 }
 
 Install-ChocolateyZipPackage @packageArgs
-Install-ChocolateyShortcut -ShortcutFilePath "${env:UserProfile}\Desktop\Ipe-7.2.21.lnk" -TargetPath "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)\\ipe-7.2.21\bin\ipe.exe"
+Install-ChocolateyShortcut -ShortcutFilePath "${env:SystemDrive}\ProgramData\Microsoft\Windows\Start Menu\Programs\Ipe.lnk" -TargetPath "$installDir\ipe-7.2.21\bin\ipe.exe"
+Install-ChocolateyShortcut -ShortcutFilePath "${env:UserProfile}\Desktop\Ipe.lnk" -TargetPath "$installDir\ipe-7.2.21\bin\ipe.exe"
