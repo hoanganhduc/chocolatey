@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>tpx</id>
+    <title>TpX</title>
+    <version>1.5</version>
+    <authors>Alexander Tsyplakov</authors>
+    <owners>Alexander Tsyplakov</owners>
+    <summary>TpX: drawing tool for TeX</summary>
+    <description>TpX is a simple graphical editor for Windows for inclusion graphics into TeX files. It can also be used as a standalone editor for vector graphics.
+	
+### About TpX
+
+TpX is a lightweight, easy-to-use graphical editor for Windows platform for creation of drawings and inclusion them into LaTeX files in publication-ready form. It can also be used as a stand-alone editor for vector graphics.
+
+The output is a file (with extension .TpX) containing the drawing as LaTeX code or as an \includegraphics link to an external file created by the program. User can choose between several "output formats". TpX saves its own data in TeX file comments so that the drawing could be loaded into TpX and edited again. This internal TpX format is based on XML and could be understood and edited easily.
+
+TpX can "import" EMF/WMF pictures created by other Windows applications, including many applications producing scientific graphs. It also can import simple SVG pictures. In most cases the result is nice, though sometimes imported picture needs some manual editing. So TpX can be used as a EMF-to-any and SVG-to-any converter.
+	</description>
+    <projectUrl>http://tpx.sourceforge.net/</projectUrl>
+	<projectSourceUrl>https://sourceforge.net/projects/tpx/</projectSourceUrl>
+    <tags>tpx drawing figure graphics</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance> <!-- or true if you require the user to accept the License before installing -->
+  </metadata>
+</package>
