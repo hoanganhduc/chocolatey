@@ -1,7 +1,14 @@
 $ErrorActionPreference = 'Stop'
 
+$pp = Get-PackageParameters
+
+if ($pp['InstallDir']) {
+	$installDir = $pp['InstallDir']
+} else {
+	$installDir = "${env:SystemDrive}\vietex"
+}
+
 $toolsDir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
-$installDir = "${env:SystemDrive}\vietex"
 $fileLocation = Join-Path $toolsDir "vietex41.zip"
 $exefileLocation = Join-Path $toolsDir "vietex40.exe"
 
@@ -29,7 +36,7 @@ if(!(Test-Path $fileLocation -PathType leaf))
 }
 
 Get-ChocolateyUnzip -FileFullPath "$fileLocation" -Destination "$toolsDir"
-# 7z x $fileLocation -o$toolsDir
 Install-ChocolateyZipPackage @packageArgs
 Remove-Item $exefileLocation -Force -Confirm:$false
 Install-ChocolateyShortcut -ShortcutFilePath "${env:UserProfile}\Desktop\VieTeX.lnk" -TargetPath "$installDir\vietex.exe"
+Install-ChocolateyShortcut -ShortcutFilePath "${env:SystemDrive}\ProgramData\Microsoft\Windows\Start Menu\Programs\VieTeX.lnk" -TargetPath "$installDir\vietex.exe"

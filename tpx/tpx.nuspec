@@ -16,6 +16,10 @@ TpX is a lightweight, easy-to-use graphical editor for Windows platform for crea
 The output is a file (with extension .TpX) containing the drawing as LaTeX code or as an \includegraphics link to an external file created by the program. User can choose between several "output formats". TpX saves its own data in TeX file comments so that the drawing could be loaded into TpX and edited again. This internal TpX format is based on XML and could be understood and edited easily.
 
 TpX can "import" EMF/WMF pictures created by other Windows applications, including many applications producing scientific graphs. It also can import simple SVG pictures. In most cases the result is nice, though sometimes imported picture needs some manual editing. So TpX can be used as a EMF-to-any and SVG-to-any converter.
+
+### Parameters
+
+* `/InstallDir:(path)` - Set custom path for the installation directory. The default setting is `C:\tpx`.
 	</description>
     <projectUrl>http://tpx.sourceforge.net/</projectUrl>
 	<projectSourceUrl>https://sourceforge.net/projects/tpx/</projectSourceUrl>

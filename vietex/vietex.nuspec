@@ -17,9 +17,13 @@
 * Supports usual editing functions, inner keystroke macros for TeX files, Autocomplete, Folding, Coloring, Abbreviation, Script text, ...
 * Includes several Vietnamese Templates and Guides.
 
+### Parameters
+
+* `/InstallDir:(path)` - Set custom path for the installation directory. The default setting is `C:\vietex`.
+
 ### Note
 
-The default settings in VieTeX work best with [MikTeX](https://miktex.org/). 
+The default settings in VieTeX work best with [MikTeX](https://miktex.org/).
 	</description>
     <projectUrl>https://nhdien.wordpress.com</projectUrl>
     <tags>vietex tex editor Vietnamese</tags>

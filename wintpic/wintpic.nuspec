@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>wintpic</id>
+    <title>WinTpic</title>
+    <version>4.32</version>
+    <authors>Masashi Horii</authors>
+    <owners>Masashi Horii</owners>
+    <summary>WinTpic</summary>
+    <description>
+	A tool for creating graphs and diagrams that can be inserted into TeX.
+	
+### Parameters
+
+* `/InstallDir:(path)` - Set custom path for the installation directory. The default setting is `C:\wintpic`.
+	</description>
+    <projectUrl>http://aogaeru-lab.my.coocan.jp/sub1.html</projectUrl>
+    <tags>wintpic drawing figure graphics</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance> <!-- or true if you require the user to accept the License before installing -->
+  </metadata>
+</package>
