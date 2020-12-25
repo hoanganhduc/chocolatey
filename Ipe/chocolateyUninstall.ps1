@@ -6,4 +6,8 @@ $installDir = $shell.CreateShortcut($shortcutPath).TargetPath | Split-Path -pare
 
 Remove-Item $installDir -Recurse -Force -Confirm:$false
 Remove-Item $shortcutPath -Recurse -Force -Confirm:$false
-Remove-Item "${env:UserProfile}\Desktop\Ipe.lnk" -Force -Confirm:$false
+
+$desktopShortcut = "${env:UserProfile}\Desktop\Ipe.lnk"
+if (Test-Path $desktopShortcut -PathType leaf) {
+	Remove-Item $desktopShortcut -Force -Confirm:$false
+}

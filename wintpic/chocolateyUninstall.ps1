@@ -6,4 +6,8 @@ $installDir = $shell.CreateShortcut($shortcutPath).TargetPath | Split-Path -pare
 
 Remove-Item $installDir -Recurse -Force -Confirm:$false
 Remove-Item $shortcutPath -Force -Confirm:$false
-Remove-Item "${env:UserProfile}\Desktop\WinTpic-4.32a.lnk" -Force -Confirm:$false
+
+$desktopShortcut = "${env:UserProfile}\Desktop\WinTpic-4.32a.lnk"
+if (Test-Path $desktopShortcut -PathType leaf) {
+	Remove-Item $desktopShortcut -Force -Confirm:$false
+}
