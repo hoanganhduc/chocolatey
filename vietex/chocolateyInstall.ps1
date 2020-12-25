@@ -37,6 +37,6 @@ if(!(Test-Path $fileLocation -PathType leaf))
 Get-ChocolateyUnzip -FileFullPath "$fileLocation" -Destination "$toolsDir"
 Remove-Item $fileLocation -Force -Confirm:$false
 Install-ChocolateyZipPackage @packageArgs
-Remove-Item $exefileLocation -Force -Confirm:$false
+# Remove-Item $exefileLocation -Force -Confirm:$false
 Install-ChocolateyShortcut -ShortcutFilePath "${env:UserProfile}\Desktop\VieTeX.lnk" -TargetPath "$installDir\vietex.exe"
 Install-ChocolateyShortcut -ShortcutFilePath "${env:SystemDrive}\ProgramData\Microsoft\Windows\Start Menu\Programs\VieTeX.lnk" -TargetPath "$installDir\vietex.exe"
