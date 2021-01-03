@@ -14,10 +14,8 @@ $packageArgs = @{
   fileType       = 'zip'
   unziplocation  = $installDir
   url            = 'http://aogaeru-lab.my.coocan.jp/program/WTPIC432a.zip'
-  url64bit       = 'http://aogaeru-lab.my.coocan.jp/program/WTPIC432a.zip'
   validExitCodes = @(0, 3010, 1641)
   checksum       = '70b4bc51b1e56f7871f08b479f6e8ea6d29136ce94d1ddee4db25e66f3631dc2'
-  checksum64     = '70b4bc51b1e56f7871f08b479f6e8ea6d29136ce94d1ddee4db25e66f3631dc2'
   checksumType   = 'sha256'
 }
 
