@@ -9,6 +9,7 @@ SetControlDelay -1
 ; Title for setup windows
 winInstallTitle := "pdfarranger Setup"
 winInstallFinishText := "Completing the pdfarranger installer"
+winInstallCancelText := "Are you sure you want to cancel pdfarranger installation?"
 
 ;MsgBox % "pdfarranger Setup"
 WinWait, % winInstallTitle
@@ -20,6 +21,10 @@ BlockInput Off
 ;MsgBox % "pdfarranger Setup Finish"
 WinWait, % winInstallTitle, % winInstallFinishText
 ControlClick, Finish, % winInstallTitle, % winInstallFinishText,,, NA
+
+;MsgBox % "pdfarranger Setup Cancel"
+WinWait, % winInstallTitle, % winInstallCancelText
+ControlClick, No, % winInstallTitle, % winInstallCancelText,,, NA
 
 
 
