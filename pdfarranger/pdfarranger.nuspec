@@ -7,14 +7,15 @@
     <authors>pdfarranger</authors>
     <summary>pdfarranger for Windows</summary>
     <description>*pdfarranger* is a small python-gtk application, which helps the user to merge or split pdf documents and rotate, crop and rearrange their pages using an interactive and intuitive graphical interface. It is a frontend for [pikepdf](https://github.com/pikepdf/pikepdf).
-	
-	*pdfarranger* is a fork of Konstantinos Poulios's pdfshuffler (see [Savannah](https://savannah.nongnu.org/projects/pdfshuffler) or [Sourceforge](http://sourceforge.net/projects/pdfshuffler)). It’s a humble attempt to make the project a bit more active.</description>
+    
+    *pdfarranger* is a fork of Konstantinos Poulios's pdfshuffler (see [Savannah](https://savannah.nongnu.org/projects/pdfshuffler) or [Sourceforge](http://sourceforge.net/projects/pdfshuffler)). It’s a humble attempt to make the project a bit more active.
+    </description>
     <projectUrl>https://github.com/pdfarranger/pdfarranger</projectUrl>
     <tags>pdfarranger pdf merge split rotate crop rearrange gui</tags>
-	<licenseUrl>https://github.com/pdfarranger/pdfarranger/blob/master/COPYING</licenseUrl>
+    <licenseUrl>https://raw.githubusercontent.com/pdfarranger/pdfarranger/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance> <!-- or true if you require the user to accept the License before installing -->
     <iconUrl>https://github.com/pdfarranger/pdfarranger/raw/master/data/icons/hicolor/48x48/apps/com.github.jeromerobert.pdfarranger.png</iconUrl>
-	<dependencies>
+    <dependencies>
       <dependency id="autohotkey.portable" />
     </dependencies>
   </metadata>
