@@ -18,6 +18,7 @@ $packageArgs = @{
   fileType       = 'exe'
   unziplocation  = "$installDir"
   file           = $exefileLocation
+  file64         = $exefileLocation
   validExitCodes = @(0, 3010, 1641)
   checksum       = 'e5a379e146eb8808b95414574550d8116fc4bd75824751299d498adfd92fb21f'
   checksumType   = 'sha256'
