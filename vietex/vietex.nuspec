@@ -5,7 +5,7 @@
     <title>VieTeX</title>
 	<version>4.0</version>
     <authors>Nguyen Huu Dien</authors>
-    <owners>Nguyen Huu Dien</owners>
+    <owners>hoanganhduc</owners> <!-- maintainer -->
     <summary>VieTeX for Windows</summary>
     <description>A TeX Editor for Vietnamese (Chương trình soạn thảo TeX)
 ### Features

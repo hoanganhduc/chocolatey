@@ -1,5 +1,9 @@
 $ErrorActionPreference = 'Stop';
 
+$toolsDir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
+$fileLocation = Join-Path $toolsDir "vietex41.zip"
+$exefileLocation = Join-Path $toolsDir "vietex40.exe"
+
 $pp = Get-PackageParameters
 
 if ($pp['InstallDir']) {
@@ -8,9 +12,7 @@ if ($pp['InstallDir']) {
 	$installDir = "${env:SystemDrive}\vietex"
 }
 
-$toolsDir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
-$fileLocation = Join-Path $toolsDir "vietex41.zip"
-$exefileLocation = Join-Path $toolsDir "vietex40.exe"
+"$installDir" | Out-File -FilePath $toolsDir\installDir.txt
 
 $packageArgs = @{
   packageName    = 'vietex'
@@ -25,11 +27,10 @@ $packageArgs = @{
 
 if(!(Test-Path $fileLocation -PathType leaf))
 {
-	echo "Downloading vietex41.zip ..."
 	$download_page = Invoke-WebRequest -UseBasicParsing -Uri https://www.mediafire.com/download/u2z7mxhxfh1f4yg/vietex41.zip
 	$regex = "vietex41.zip$" 
 	$zipFileUrl  = $download_page.links | ? href -match $regex | select -First 1 -expand href 
-	Invoke-WebRequest -Uri "$zipFileUrl" -OutFile "$fileLocation"
+	Get-ChocolateyWebFile -PackageName 'vietex' -FileFullPath "$fileLocation" -Url "$zipFileUrl"
 }
 
 Get-ChocolateyUnzip -FileFullPath "$fileLocation" -Destination "$toolsDir"
