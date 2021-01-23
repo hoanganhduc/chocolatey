@@ -18,7 +18,7 @@
     <iconUrl>https://github.com/pdfarranger/pdfarranger/raw/master/data/icons/hicolor/48x48/apps/com.github.jeromerobert.pdfarranger.png</iconUrl>
 	<packageSourceUrl>https://github.com/pdfarranger/pdfarranger</packageSourceUrl>
     <dependencies>
-      <dependency id="autohotkey.portable" version="1.1.30.02" />
+      <dependency id="autohotkey.portable" version="1.1.32.00" />
     </dependencies>
   </metadata>
 </package>
