@@ -20,9 +20,9 @@ BlockInput Off
 
 IfWinExist, % winInstallTitle, % winInstallCancelText,, 
 {
-	;MsgBox % "pdfarranger Setup Cancel"
-	WinWait, % winInstallTitle, % winInstallCancelText
-	ControlClick, No, % winInstallTitle, % winInstallCancelText,,, NA
+    ;MsgBox % "pdfarranger Setup Cancel"
+    WinWait, % winInstallTitle, % winInstallCancelText
+    ControlClick, No, % winInstallTitle, % winInstallCancelText,,, NA
 }
 
 ;MsgBox % "pdfarranger Setup Finish"
