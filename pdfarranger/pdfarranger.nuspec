@@ -15,7 +15,6 @@
     <tags>pdfarranger pdf merge split rotate crop rearrange gui</tags>
     <licenseUrl>https://raw.githubusercontent.com/pdfarranger/pdfarranger/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance> <!-- or true if you require the user to accept the License before installing -->
-    <iconUrl>https://github.com/pdfarranger/pdfarranger/raw/master/data/icons/hicolor/48x48/apps/com.github.jeromerobert.pdfarranger.png</iconUrl>
 	<packageSourceUrl>https://github.com/pdfarranger/pdfarranger</packageSourceUrl>
     <dependencies>
       <dependency id="autohotkey.portable" version="1.1.33.02" />

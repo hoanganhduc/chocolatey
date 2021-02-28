@@ -1,1 +1,0 @@
-Stop-Process -ProcessName "AutoHotkey*" -Force
