@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>flashboot</id>
+    <title>FlashBoot</title>
+    <version>3.3-g</version>
+    <authors>PrimeExpert Software</authors>
+    <owners>hoanganhduc</owners>
+    <summary>FlashBoot for Windows</summary>
+    <description>FlashBoot for Windows
+### Features
+
+#### FlashBoot Free ($0)
+
+* Prepare USB thumbdrive for installation of Windows 7, Windows 10, Windows 8/8.1 or Windows Vista to internal HDD/SSD
+* Install full-featured Windows 10 or Windows 8/8.1 to USB thumbdrive, which will boot independently from main OS on HDD/SSD
+* Save USB thumbdrive to image file
+* Restore USB thumbdrive from image file
+* Copy USB thumbdrive to another USB thumbdrive, retaining bootability
+* Install DOS to USB thumbdrive
+* Install UEFI shell to USB thumbdrive
+* Quickly format USB thumbdrive
+* Wipe USB thumbdrive (securely erase all data)
+
+#### FlashBoot Pro ($29.95)
+
+Additional Features
+
+* Create installable clone of Windows 7, Windows 8/8.1 or Windows 10 with optional driver integration (USB 3.0, NVMe, AHCI/RAID or user-supplied drivers)
+* Create bootable clone of Windows 10 or Windows 8.1 on USB thumbdrive, which will boot independently from main OS on HDD/SSD
+* Prepare USB thumbdrive for installation of Windows 7, Windows 10, Windows 8/8.1 or Windows Vista to internal HDD/SSD with driver integration (USB 3.0, NVMe, AHCI/RAID or user-supplied drivers)
+Prepare USB thumbdrive for installation of Windows XP to internal HDD/SSD
+* Install mini version of Windows XP (BartPE) to USB thumbdrive, which will boot independently from main OS on HDD/SSD
+* Create self-extracting archives (USB formatters with predefined content)
+	</description>
+    <projectUrl>https://www.prime-expert.com/flashboot</projectUrl>
+    <licenseUrl>https://www.prime-expert.com/privacy_policy/</licenseUrl>
+    <tags>flashboot windows install boot clone usb hdd/ssd</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance> <!-- or true if you require the user to accept the License before installing -->
+    <iconUrl>https://www.prime-expert.com/shared/ieicon_flashboot.gif</iconUrl>
+    <dependencies>
+      <dependency id="autohotkey.portable" version="1.1.33.02" />
+    </dependencies>
+  </metadata>
+</package>
