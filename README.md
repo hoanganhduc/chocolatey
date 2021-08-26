@@ -8,3 +8,4 @@
 * [TpX](https://chocolatey.org/packages/tpx) (since version 1.5).
 * [WinTpic](https://chocolatey.org/packages/wintpic) (since version 4.32a).
 * [FlashBoot](https://www.prime-expert.com/flashboot/) (since version 3.3g).
+* [FFSJ](http://www.fastfilejoiner.com/) (since version 3.3).
