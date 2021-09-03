@@ -9,7 +9,7 @@ $packageArgs = @{
   unziplocation  = "$toolsDir"
   url            = 'https://github.com/Juvenal-Yescas/mediafire-dl/archive/master.zip'
   validExitCodes = @(0, 3010, 1641)
-  checksum       = '8c4b3de2120140e1f2a0ba0d2bd5625e85626f2840fff64214ad90c80a4057d6'
+  checksum       = '540516937c7cad9b168042af1d47130231b57a07517f5411b5f0e6fcd7f17321'
   checksumType   = 'sha256'
 }
 
