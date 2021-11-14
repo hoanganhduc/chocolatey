@@ -7,8 +7,8 @@ $packageArgs = @{
   softwareName  = 'pdfarranger'
   fileType      = 'MSI'
   silentArgs    = ""
-  url           = 'https://github.com/pdfarranger/pdfarranger/releases/download/1.7.1/pdfarranger-1.7.1-windows-installer.msi'
-  checksum      = 'b1cc42839a098151d28ff86411ca763257c1dfe42b3105eda09e1100456eac23' # 1.7.1
+  url           = 'https://github.com/pdfarranger/pdfarranger/releases/download/1.8.0/pdfarranger-1.8.0-windows-installer.msi'
+  checksum      = '3478994f8c4c4043a82cc4920cced4f4a155661cdcfe9120210d009b811d4804' # 1.8.0
   checksumType  = 'sha256'
 }
 
