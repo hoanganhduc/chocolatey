@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>arxiv-collector</id>
+    <title>arxiv-collector</title>
+    <version>0.4.1</version>
+    <authors>Danica J. Sutherland</authors>
+    <owners>hoanganhduc</owners>
+    <summary>arxiv-collector for Windows</summary>
+    <description>arxiv-collector for Windows - A little Python script to collect LaTeX sources for upload to the arXiv.
+
+## Usage
+
+Use with `arxiv-collector` from your project's main directory, or `arxiv-collector file.tex` if you have more than one .tex file and it can't guess correctly which one to use; `arxiv-collector --help` for more.
+
+## Requirements:
+
+* A working installation of [`latexmk`](http://personal.psu.edu/jcc8/software/latexmk/), on your PATH. (This is used to make the `.bbl` file and to track which files are used.)
+  * If you have working TeX and Perl installations, you likely already have `latexmk` even if you don't use it. If you don't, you can either install it the "normal" way (`tmlgr install latexmk`, `apt-get install latexmk`, ...), or just grab the script with `arxiv-collector --get-latexmk path/to/output/latexmk`.
+  * If `latexmk` isn't on your PATH for whatever reason, add `--latexmk ./path/to/latexmk` to your `arxiv-collector` call.
+  * **NOTE:** `latexmk` version 4.63b has broken dependency tracking, which means `arxiv-collector` won't work with it. You can either update it with your package manager, or you can get a working version, e.g. 4.64a, with `arxiv-collector --get-latexmk path/to/output/latexmk`, and either put it in e.g. `~/bin` or pass `--latexmk` to your `arxiv-collector` invocations.
+
+
+## Caveats
+
+The script may or may not work if you do something weird with your project layout / etc; always check that the arXiv output pdf looks right. [Let me know](https://github.com/djsutherland/arxiv-collector/issues/new) if you run into any problems, including a copy of the not-working project if possible.
+
+In particular, if you include figures or other files with absolute paths (`\includegraphics{/home/me/wow.png}` instead of `\includegraphics{../wow.png}`), the script will think it's a system file and not include it by default. You can hack it with `--include-packages` to include any directory name in the path.
+    </description>
+    <projectUrl>https://github.com/djsutherland/arxiv-collector</projectUrl>
+    <licenseUrl>https://github.com/djsutherland/arxiv-collector/blob/master/LICENSE</licenseUrl>
+    <tags>arxiv-collector arXiv python</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance> <!-- or true if you require the user to accept the License before installing -->
+    <dependencies>
+      <dependency id="python3" version="3.8.6" />
+    </dependencies>
+  </metadata>
+</package>

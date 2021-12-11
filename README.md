@@ -9,3 +9,4 @@
 * [WinTpic](https://chocolatey.org/packages/wintpic) (since version 4.32a).
 * [FlashBoot](https://www.prime-expert.com/flashboot/) (since version 3.3g).
 * [FFSJ](http://www.fastfilejoiner.com/) (since version 3.3).
+* [arxiv-collector](https://github.com/djsutherland/arxiv-collector) (since version 0.4.1).
