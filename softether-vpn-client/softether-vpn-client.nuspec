@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>softether-vpn-client</id>
+    <title>SoftEther VPN Client</title>
+    <version>4.38.9760</version>
+    <authors>SoftEther Project, University of Tsukuba, Japan</authors>
+	<owners>hoanganhduc</owners>
+    <summary>SoftEther VPN Client for Windows</summary>
+    <description>
+	An Open-Source Free ​Cross-platform Multi-protocol VPN Program from University of Tsukuba, Japan.
+    </description>
+    <projectUrl>https://www.softether.org/</projectUrl>
+    <tags>softether multi-protocol vpn client</tags>
+    <licenseUrl>https://www.softether.org/4-docs/1-manual/1._SoftEther_VPN_Overview/1.3_SoftEther_VPN_is_Open_Source</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance> <!-- or true if you require the user to accept the License before installing -->
+	<packageSourceUrl>https://www.softether.org/</packageSourceUrl>
+    <dependencies>
+      <dependency id="autohotkey.portable" version="1.1.33.02" />
+    </dependencies>
+  </metadata>
+</package>

@@ -10,3 +10,4 @@
 * [FlashBoot](https://www.prime-expert.com/flashboot/) (since version 3.3g).
 * [FFSJ](http://www.fastfilejoiner.com/) (since version 3.3).
 * [arxiv-collector](https://github.com/djsutherland/arxiv-collector) (since version 0.4.1).
+* [SoftEther VPN Client](https://www.softether.org) (since version 4.38.9760).
