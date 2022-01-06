@@ -16,6 +16,8 @@ WinActivate
 Send {Enter}
 WinActivate
 Send {Enter}
+WinActivate
+Send {Enter}
 
 ;MsgBox % "softether-vpn-client License"
 WinWait, % winInstallTitle, % agreeEULText
@@ -42,3 +44,5 @@ Send {Enter}
 WinWait, % winInstallTitle, % winInstallFinishedText
 WinActivate
 ControlClick, Finish, % winInstallTitle, % winInstallFinishedText,,, NA
+
+ExitApp
