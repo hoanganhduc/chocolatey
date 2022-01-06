@@ -7,9 +7,9 @@ $packageArgs = @{
   softwareName  = 'FlashBoot'
   fileType      = 'exe'
   silentArgs    = "/S"
-  url           = 'https://flashboot-v3.prime-expert.com/flashboot-3.3j-setup.exe'
+  url           = 'https://flashboot-v3.prime-expert.com/flashboot-3.3k-setup.exe'
   validExitCodes= @(0, 3010, 1641)
-  checksum      = '067c1b15854ccddb1ede3efd3e702d686cc44310f1f73d37377d734c99d9ba22' # 3.3j
+  checksum      = '1b6092dba22cf6124bb08b7ded1b0b5055fb992dd641fc884a54485b72962679' # 3.3k
   checksumType  = 'sha256'
 }
 
