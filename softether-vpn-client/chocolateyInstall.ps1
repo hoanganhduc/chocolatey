@@ -7,8 +7,8 @@ $packageArgs = @{
   softwareName  = 'softether-vpn-client'
   fileType      = 'exe'
   silentArgs    = ""
-  url           = 'https://jp.softether-download.com/files/softether/v4.38-9760-rtm-2021.08.17-tree/Windows/SoftEther_VPN_Client/softether-vpnclient-v4.38-9760-rtm-2021.08.17-windows-x86_x64-intel.exe'
-  checksum      = 'fe1cf6cd8d78c063f898d1841feecd35db0d5d2ab0e3d51a709924ea1d2b4b7c' # 4.38-9760-rtm-2021.08.17
+  url           = 'https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/releases/download/v4.39-9772-beta/softether-vpnclient-v4.39-9772-beta-2022.04.26-windows-x86_x64-intel.exe'
+  checksum      = '226e6b37712bdf43e43b98768b6b1e711be7c5a07807cb3f0fc59532e36cc5e5' # v4.39-9772-beta-2022.04.26
   checksumType  = 'sha256'
 }
 
