@@ -1,6 +1,7 @@
 $ErrorActionPreference = 'Stop';
 
 $pp = Get-PackageParameters
+$pkgver = "7.2.26"
 
 if ($pp['InstallDir']) {
 	$installDir = $pp['InstallDir']
@@ -13,14 +14,14 @@ $packageArgs = @{
   softwareName   = 'Ipe extensible drawing editor'
   fileType       = 'zip'
   unziplocation  = "$installDir"
-  url            = 'https://github.com/otfried/ipe/releases/download/v7.2.25/ipe-7.2.25-win32.zip' # 7.2.25 32-bit
-  url64bit       = 'https://github.com/otfried/ipe/releases/download/v7.2.25/ipe-7.2.25-win64.zip' # 7.2.25 64-bit
+  url            = "https://github.com/otfried/ipe/releases/download/v$pkgver/ipe-$pkgver-win32.zip"
+  url64bit       = "https://github.com/otfried/ipe/releases/download/v$pkgver/ipe-$pkgver-win64.zip"
   validExitCodes = @(0, 3010, 1641)
-  checksum       = '7bee958367974afeb7f36f9f80bf02bef90878243a9ba9d7f47a74edeb12bf62' # 7.2.24 32-bit
-  checksum64     = '34ee93e31e4caaf471784bb8105f80518fbfccb0c32557fc1949f6bd7dfcacd7' # 7.2.24 64-bit
+  checksum       = '3e67e901587508b20e8daf1c311c90036acc6408cc6fdc5b75b4cf32d973e772' 
+  checksum64     = '8e175570d8e0a83dfc490bbb9115f07196b015d4d249af64417c2faeffff3834'
   checksumType   = 'sha256'
 }
 
 Install-ChocolateyZipPackage @packageArgs
-Install-ChocolateyShortcut -ShortcutFilePath "${env:SystemDrive}\ProgramData\Microsoft\Windows\Start Menu\Programs\Ipe.lnk" -TargetPath "$installDir\ipe-7.2.25\bin\ipe.exe"
-Install-ChocolateyShortcut -ShortcutFilePath "${env:UserProfile}\Desktop\Ipe.lnk" -TargetPath "$installDir\ipe-7.2.25\bin\ipe.exe"
+Install-ChocolateyShortcut -ShortcutFilePath "${env:SystemDrive}\ProgramData\Microsoft\Windows\Start Menu\Programs\Ipe.lnk" -TargetPath "$installDir\ipe-$pkgver\bin\ipe.exe"
+Install-ChocolateyShortcut -ShortcutFilePath "${env:UserProfile}\Desktop\Ipe.lnk" -TargetPath "$installDir\ipe-$pkgver\bin\ipe.exe"
