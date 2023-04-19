@@ -5,9 +5,9 @@ $packageArgs = @{
   softwareName  = 'Zalo PC'
   fileType      = 'exe'
   silentArgs    = "/S"
-  url           = 'https://res-download-pc-te-vnno-pt-4.zadn.vn/hybrid/ZaloSetup-23.3.1.exe'
+  url           = 'https://res-download-pc-te-vnno-pt-4.zadn.vn/hybrid/ZaloSetup-23.4.1.exe'
   validExitCodes= @(0, 3010, 1641)
-  checksum      = '673d4563efcc62fa92d5b9e81201e96ff5ef2ec6f44fbed0ad22a5d2cfd6a8f1' # 23.3.1
+  checksum      = '8d34c9b85564fb6ff8535d85829dbb27d9629bde226ca4cf9c43f27f7f797ee2' # 23.4.1
   checksumType  = 'sha256'
 }
 
