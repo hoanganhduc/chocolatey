@@ -9,6 +9,7 @@ SetControlDelay -1
 winInstallTitle := "SoftEther VPN Setup Wizard"
 agreeEULText := "I agree to the End User License Agreement"
 openAppText := "Start the SoftEther VPN Client Manager."
+mainAppTitle := "SoftEther VPN Client Manager"
 winInstallFinishedText := "The setup process of SoftEther VPN Client has completed successfully"
 
 ;MsgBox % "softether-vpn-client Setup"
@@ -48,13 +49,19 @@ WinWait, % winInstallTitle, % winInstallFinishedText
 WinActivate
 Gui, Add, Checkbox, vAgreeOpenApp, % openAppText
 Gui, Submit, NoHide ;
-If (AgreeOpenApp = 0) {
-	WinActivate
-    Send {Tab}
-    Send {Space}
-	Send {Enter}
-} 
+WinActivate
+Send {Tab}
+Send {Space}
+Send {Enter}
+
+;MsgBox % "softether-vpn-client Main Windows"
+WinWait, % mainAppTitle,, 3
+If ErrorLevel {
+	ExitApp
+}
 Else {
+	WinActivate
+	Send {Alt down}{Q down}{Alt up}{Q up}
 	Send {Enter}
 }
 
