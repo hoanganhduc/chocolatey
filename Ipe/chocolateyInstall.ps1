@@ -1,7 +1,7 @@
 $ErrorActionPreference = 'Stop';
 
 $pp = Get-PackageParameters
-$pkgver = "7.2.27"
+$pkgver = "7.2.28"
 
 if ($pp['InstallDir']) {
 	$installDir = $pp['InstallDir']
@@ -16,7 +16,7 @@ $packageArgs = @{
   unziplocation  = "$installDir"
   url64bit       = "https://github.com/otfried/ipe/releases/download/v$pkgver/ipe-$pkgver-win64.zip"
   validExitCodes = @(0, 3010, 1641)
-  checksum64     = 'e3ef969f48eb000c8a6c4445cc4ebc2e582f50b601794c6dc1fb4ef459734db3'
+  checksum64     = 'cb5522955200d32ad15c511cfa93f581048a38170e2552f9b961b6b6e24e2356'
   checksumType   = 'sha256'
 }
 
