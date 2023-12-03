@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>latexml</id>
+    <version>0.8.7</version>
+    <title>LaTeXML</title>
+    <authors>NIST</authors>
+    <owners>ribose</owners>
+    <licenseUrl>https://creativecommons.org/share-your-work/public-domain/cc0</licenseUrl>
+    <projectUrl>https://dlmf.nist.gov/LaTeXML/</projectUrl>
+    <iconUrl>https://dlmf.nist.gov/LaTeXML/x7.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>In the process of developing the Digital Library of Mathematical Functions, NIST had needed a means of transforming the LaTeX sources of our material into XML which would be used for further manipulations, rearrangements and construction of the web site. In particular, a true ‘Digital Library’ should focus on the semantics of the material, and so NIST should convert the mathematical material into both content and presentation MathML. At the time, there found no software suitable to our needs, so NIST began development of LaTeXML in-house.</description>
+    <summary>A LaTeX to XML/HTML/MathML Converter</summary>
+    <releaseNotes>https://github.com/brucemiller/LaTeXML/releases</releaseNotes>
+    <copyright>Public Domain</copyright>
+    <tags>metanorma latex dlmf nist xml html mathml</tags>
+    <projectSourceUrl>https://github.com/brucemiller/LaTeXML</projectSourceUrl>
+    <packageSourceUrl>https://github.com/metanorma/chocolatey-latexml</packageSourceUrl>
+    <docsUrl>https://dlmf.nist.gov/LaTeXML/docs.html</docsUrl>
+    <bugTrackerUrl>https://github.com/brucemiller/LaTeXML/issues</bugTrackerUrl>
+    <dependencies>
+      <dependency id="strawberryperl" version="5.38" />
+    </dependencies>
+  </metadata>
+</package>
