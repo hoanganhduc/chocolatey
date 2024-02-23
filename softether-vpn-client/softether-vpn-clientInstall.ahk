@@ -63,6 +63,7 @@ Else {
 	WinActivate
 	Send {Alt down}{Q down}{Alt up}{Q up}
 	Send {Enter}
+	ExitApp
 }
 
 DetectHiddenWindows, On
