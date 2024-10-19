@@ -33,3 +33,5 @@ WinActivate
 Send {Space}
 Send {Enter}
 BlockInput Off
+
+ExitApp
