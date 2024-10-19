@@ -1,8 +1,8 @@
 $ErrorActionPreference = 'Stop';
 
 $toolsDir   = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
-$zipFileUrl = "https://download.vpngate.jp/common/cd.aspx/vpngate-client-2023.11.03-build-9799.157316.zip"
-$fileLocation = Join-Path $toolsDir "vpngate-client-2023.11.03-build-9799.157316.zip"
+$zipFileUrl = "https://download.vpngate.jp/common/cd.aspx/vpngate-client-2024.10.19-build-9799.160124.zip"
+$fileLocation = Join-Path $toolsDir "vpngate-client-2024.10.19-build-9799.160124.zip"
 $exefileLocation = Join-Path $toolsDir "vpngate-client-v4.43-9799-beta-2023.08.31.exe"
 
 $packageArgs = @{

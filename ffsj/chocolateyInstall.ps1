@@ -7,8 +7,8 @@ $packageArgs = @{
   softwareName  = 'ffsj'
   fileType      = 'exe'
   silentArgs    = ""
-  url           = 'http://www.fastfilejoiner.com/FSJSetup.exe'
-  checksum      = 'd3502562bf077167ad654cdc406cd078e286cbc241d8181d4f3294c7f7356d15' # 3.3
+  file           = 'FSJSetup.exe'
+  checksum      = 'd3502562bf077167ad654cdc406cd078e286cbc241d8181d4f3294c7f7356d15' # 3.3.0
   checksumType  = 'sha256'
 }
 
