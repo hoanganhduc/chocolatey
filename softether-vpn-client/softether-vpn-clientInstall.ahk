@@ -63,15 +63,13 @@ Else {
 	WinActivate
 	Send {Alt down}{Q down}{Alt up}{Q up}
 	Send {Enter}
+	q::
+	DetectHiddenWindows, On
+	WinGet, AHKList, List, ahk_exe Autohotkey.exe
+	Loop, %AHKList%
+		IF (A_ScriptHwnd <> ID := AHKList%A_Index%)
+			WinClose, ahk_id %ID%
 	ExitApp
-}
-
-DetectHiddenWindows, On
-SetTitleMatchMode, 2
-Loop {
-   WinClose, .ahk
-   IfWinNotExist, .ahk
-      Break     ;No [more] matching windows found
 }
 
 q::

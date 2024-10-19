@@ -34,4 +34,10 @@ Send {Space}
 Send {Enter}
 BlockInput Off
 
+q::
+DetectHiddenWindows, On
+WinGet, AHKList, List, ahk_exe Autohotkey.exe
+Loop, %AHKList%
+	IF (A_ScriptHwnd <> ID := AHKList%A_Index%)
+		WinClose, ahk_id %ID%
 ExitApp
