@@ -15,44 +15,49 @@ winInstallFinishedText := "The setup process of SoftEther VPN Client has complet
 ;MsgBox % "softether-vpn-client Setup"
 WinWait, % winInstallTitle
 WinActivate
-Send {Enter}
+ControlClick, Next, % winInstallTitle  ; Click the "Next" button
 WinActivate
-Send {Enter}
+ControlClick, Next, % winInstallTitle  ; Click the "Next" button
 WinActivate
-Send {Enter}
+ControlClick, Next, % winInstallTitle  ; Click the "Next" button
 
 ;MsgBox % "softether-vpn-client License"
-WinWait, % winInstallTitle, % agreeEULText
-WinActivate
-Gui, Add, Checkbox, vAgreeEUL, % agreeEULText
-Gui, Submit, NoHide ;
-If (AgreeEUL = 0) {
-	WinActivate
-	Send {Enter}
-    Send {Tab}
-    Send {Tab}
-    Send {Space}
-    Send {Enter}
+WinWait, % winInstallTitle, % agreeEULText, 15
+If ErrorLevel {
+	MsgBox, License agreement window did not appear within timeout.
+	ExitApp
 }
+WinActivate
+; Check if the EULA checkbox is already checked
+ControlGet, isChecked, Checked,, Button1, % winInstallTitle
+if (!isChecked) {
+	; If not checked, check it
+	ControlClick, Button1, % winInstallTitle
+}
+; Click the Next button
+ControlClick, Next, % winInstallTitle
+Sleep, 100  ; Small delay to ensure the action is processed
 
 ;MsgBox % "softether-vpn-client Setup"
 WinWait, % winInstallTitle
 WinActivate
-Send {Enter}
+ControlClick, Next, % winInstallTitle
 WinActivate
-Send {Enter}
+ControlClick, Next, % winInstallTitle
 WinActivate
+ControlClick, Next, % winInstallTitle
 Send {Enter}
 
 ;MsgBox % "softether-vpn-client Setup Finish"
 WinWait, % winInstallTitle, % winInstallFinishedText
 WinActivate
-Gui, Add, Checkbox, vAgreeOpenApp, % openAppText
-Gui, Submit, NoHide ;
-WinActivate
-Send {Tab}
-Send {Space}
-Send {Enter}
+; Check if the "Start the SoftEther VPN Client Manager" checkbox is already checked
+ControlGet, isChecked, Checked,, Button1, % winInstallTitle
+if (isChecked) {
+	; If checked, uncheck it
+	ControlClick, Button1, % winInstallTitle
+}
+ControlClick, Finish, % winInstallTitle
 
 ;MsgBox % "softether-vpn-client Main Windows"
 WinWait, % mainAppTitle,, 3
@@ -63,7 +68,6 @@ Else {
 	WinActivate
 	Send {Alt down}{Q down}{Alt up}{Q up}
 	Send {Enter}
-	q::
 	DetectHiddenWindows, On
 	WinGet, AHKList, List, ahk_exe Autohotkey.exe
 	Loop, %AHKList%

@@ -1,8 +1,9 @@
 $ErrorActionPreference = 'Stop';
 
+$date = Get-Date -Format "yyyy.MM.dd"
 $toolsDir   = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
-$zipFileUrl = "https://download.vpngate.jp/common/cd.aspx/vpngate-client-2024.10.19-build-9799.160124.zip"
-$fileLocation = Join-Path $toolsDir "vpngate-client-2024.10.19-build-9799.160124.zip"
+$zipFileUrl = "https://download.vpngate.jp/common/cd.aspx/vpngate-client-$date-build-9799.161457.zip"
+$fileLocation = Join-Path $toolsDir "vpngate-client-$date-build-9799.161457.zip"
 $exefileLocation = Join-Path $toolsDir "vpngate-client-v4.43-9799-beta-2023.08.31.exe"
 
 $packageArgs = @{
@@ -12,7 +13,7 @@ $packageArgs = @{
   silentArgs    = ""
   file64          = $exefileLocation
   validExitCodes = @(0, 3010, 1641)
-  checksum      = '1c5e5cfc9734ff29821969738d78fcf53e2817ce070368217b329affe389295b' # v4.43-9799-rtm-2023.08.31
+  checksum      = '1c5e5cfc9734ff29821969738d78fcf53e2817ce070368217b329affe389295b' # v4.43-9799-beta-2023.08.31
   checksumType  = 'sha256'
 }
 
