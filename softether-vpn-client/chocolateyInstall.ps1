@@ -1,9 +1,11 @@
 $ErrorActionPreference = 'Stop';
 
-$date = Get-Date -Format "yyyy.MM.dd"
+# $date = Get-Date -Format "yyyy.MM.dd"
+$date="2025.04.06"
+$build="161472"
 $toolsDir   = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
-$zipFileUrl = "https://download.vpngate.jp/common/cd.aspx/vpngate-client-$date-build-9799.161457.zip"
-$fileLocation = Join-Path $toolsDir "vpngate-client-$date-build-9799.161457.zip"
+$zipFileUrl = "https://download.vpngate.jp/common/cd.aspx/vpngate-client-$date-build-9799.$build.zip"
+$fileLocation = Join-Path $toolsDir "vpngate-client-$date-build-9799.$build.zip"
 $exefileLocation = Join-Path $toolsDir "vpngate-client-v4.43-9799-beta-2023.08.31.exe"
 
 $packageArgs = @{
