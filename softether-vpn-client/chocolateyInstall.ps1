@@ -27,6 +27,18 @@ if(!(Test-Path $fileLocation -PathType leaf))
 Get-ChocolateyUnzip -FileFullPath "$fileLocation" -Destination "$toolsDir"
 Remove-Item $fileLocation -Force -Confirm:$false
 
+# Stop any existing AutoHotkey processes
+try {
+  $existingAhkProcesses = Get-Process -Name "AutoHotKey" -ErrorAction SilentlyContinue
+  if ($existingAhkProcesses) {
+    Write-Host "Stopping existing AutoHotkey processes..."
+    Stop-Process -Name "AutoHotKey" -Force -ErrorAction SilentlyContinue
+    Start-Sleep -Seconds 1 # Give processes time to terminate
+  }
+} catch {
+  Write-Warning "Could not terminate existing AutoHotkey processes: $_"
+}
+
 $ahkExe = 'AutoHotKey'
 $ahkFile = Join-Path $toolsDir "softether-vpn-clientInstall.ahk"
 $ahkProc = Start-Process -FilePath $ahkExe `
