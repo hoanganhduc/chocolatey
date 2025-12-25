@@ -55,8 +55,7 @@ Write-Host "Downloading VPN Gate SoftEther client build $($zipInfo.Build) from $
 
 try {
   # Ensure TLS 1.2 support in older environments
-  [System.Net.ServicePointManager]::SecurityProtocol = \
-    [System.Net.ServicePointManager]::SecurityProtocol -bor [System.Net.SecurityProtocolType]::Tls12
+  [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor [System.Net.SecurityProtocolType]::Tls12
 } catch {
   Write-Warning 'Unable to set TLS 1.2 on this platform. Download may fail if the host requires it.'
 }
