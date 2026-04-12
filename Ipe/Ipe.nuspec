@@ -1,11 +1,11 @@
-<?xml version="1.0"?>
-<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>Ipe</id>
-    <title>Ipe extensible drawing editor</title>
+    <title>Ipe Extensible Drawing Editor</title>
     <version>7.2.29</version>
     <authors>Otfried Cheong</authors>
-    <owners>Otfried Cheong</owners>
+    <owners>hoanganhduc</owners>
     <summary>The Ipe extensible drawing editor for Windows</summary>
     <description>Ipe is a drawing editor for creating figures in PDF format. It supports making small figures for inclusion into LaTeX-documents as well as making multi-page PDF presentations.
 
@@ -16,18 +16,24 @@
 * It is easy to align objects with respect to each other (for instance, to place a point on the intersection of two lines, or to draw a circle through three given points) using various snapping modes.
 * Users can provide ipelets (Ipe plug-ins) to add functionality to Ipe. This way, Ipe can be extended for each task at hand.
 * Ipe can be compiled for Unix, Windows, and OSX.
-* Ipe is written in standard C++ and Lua 5.3..
+* Ipe is written in standard C++ and Lua 5.3.
 
-You can find more information about Ipe features in the [manual](http://ipe.otfried.org/manual/manual.html).
+You can find more information about Ipe features in the [manual](https://otfried.github.io/ipe/40_manual.html).
 
 ### Parameters
 
 * `/InstallDir:(path)` - Set custom path for the installation directory. The default setting is `C:\`.
-	</description>
-    <projectUrl>http://ipe.otfried.org/</projectUrl>
+    </description>
+    <projectUrl>https://ipe.otfried.org/</projectUrl>
+    <projectSourceUrl>https://github.com/otfried/ipe</projectSourceUrl>
+    <packageSourceUrl>https://github.com/hoanganhduc/chocolatey/tree/master/Ipe</packageSourceUrl>
+    <releaseNotes>https://github.com/otfried/ipe/releases/tag/v7.2.29</releaseNotes>
     <tags>ipe drawing figure pdf svg eps png</tags>
-	<licenseUrl>http://www.gnu.org/copyleft/gpl.html</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance> <!-- or true if you require the user to accept the License before installing -->
+    <licenseUrl>https://www.gnu.org/copyleft/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://a.fsdn.com/allura/p/ipe7/icon?1436280589</iconUrl>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>

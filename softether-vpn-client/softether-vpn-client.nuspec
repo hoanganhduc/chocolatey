@@ -1,23 +1,25 @@
-<?xml version="1.0"?>
-<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>softether-vpn-client</id>
     <title>SoftEther VPN Client</title>
-    <version>4.43.9799.161457</version>
+    <version>4.44.9807.164421</version>
     <authors>SoftEther Project, University of Tsukuba, Japan</authors>
-	<owners>hoanganhduc</owners>
+    <owners>hoanganhduc</owners>
     <summary>SoftEther VPN Client for Windows</summary>
-    <description>
-	An Open-Source Free ​Cross-platform Multi-protocol VPN Program from University of Tsukuba, Japan.
-    </description>
+    <description>Install the Windows VPN Gate Client Plug-in with SoftEther VPN Client. SoftEther VPN is an open-source, cross-platform, multi-protocol VPN program originally developed at the University of Tsukuba, Japan.</description>
     <projectUrl>https://www.softether.org/</projectUrl>
-    <tags>softether multi-protocol vpn client</tags>
+    <projectSourceUrl>https://github.com/SoftEtherVPN/SoftEtherVPN_Stable</projectSourceUrl>
+    <packageSourceUrl>https://github.com/hoanganhduc/chocolatey/tree/master/softether-vpn-client</packageSourceUrl>
+    <releaseNotes>https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/releases/tag/v4.44-9807-rtm</releaseNotes>
+    <tags>softether vpn vpngate client</tags>
     <licenseUrl>https://www.softether.org/4-docs/1-manual/1._SoftEther_VPN_Overview/1.3_SoftEther_VPN_is_Open_Source</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance> <!-- or true if you require the user to accept the License before installing -->
-	<packageSourceUrl>https://www.softether.org/</packageSourceUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <dependencies>
       <dependency id="autohotkey.portable" />
-      <!-- <dependency id="vcredist140" version="14.36.32532" /> -->
     </dependencies>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
